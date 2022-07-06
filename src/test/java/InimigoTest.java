@@ -45,9 +45,10 @@ class InimigoTest {
     }
 
     @Test
-    public void inimigoVivoNaoDeveMorrer() {
+    public void inimigoVivoDeveMorrer() {
         inimigo.setEstado(InimigoEstadoVivo.getInstance());
-        assertFalse(inimigo.morrer());
+        assertTrue(inimigo.morrer());
+        assertEquals(InimigoEstadoMorto.getInstance(), inimigo.getEstado());
     }
 
 
@@ -85,9 +86,10 @@ class InimigoTest {
     }
 
     @Test
-    public void inimigoSuspeitandoNaoDeveMorrer() {
+    public void inimigoSuspeitandoDeveMorrer() {
         inimigo.setEstado(InimigoEstadoSuspeitando.getInstance());
-        assertFalse(inimigo.morrer());
+        assertTrue(inimigo.morrer());
+        assertEquals(InimigoEstadoMorto.getInstance(), inimigo.getEstado());
     }
 
     //INIMIGO PROCURANDO
@@ -125,9 +127,10 @@ class InimigoTest {
     }
 
     @Test
-    public void inimigoProcurandoNaoDeveMorrer() {
+    public void inimigoProcurandoDeveMorrer() {
         inimigo.setEstado(InimigoEstadoProcurando.getInstance());
-        assertFalse(inimigo.morrer());
+        assertTrue(inimigo.morrer());
+        assertEquals(InimigoEstadoMorto.getInstance(), inimigo.getEstado());
     }
 
 

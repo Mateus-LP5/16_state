@@ -21,4 +21,9 @@ public class InimigoEstadoSuspeitando extends InimigoEstado {
         return true;
     }
 
+    public boolean morrer(Inimigo inimigo) {
+        inimigo.setEstado(InimigoEstadoMorto.getInstance());
+        return true;
+    }
+
 }

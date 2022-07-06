@@ -25,4 +25,9 @@ public class InimigoEstadoProcurando extends InimigoEstado {
         inimigo.setEstado(InimigoEstadoLutando.getInstance());
         return true;
     }
+
+    public boolean morrer(Inimigo inimigo) {
+        inimigo.setEstado(InimigoEstadoMorto.getInstance());
+        return true;
+    }
 }

@@ -15,4 +15,9 @@ public class InimigoEstadoVivo extends InimigoEstado {
         inimigo.setEstado(InimigoEstadoSuspeitando.getInstance());
         return true;
     }
+
+    public boolean morrer(Inimigo inimigo) {
+        inimigo.setEstado(InimigoEstadoMorto.getInstance());
+        return true;
+    }
 }
